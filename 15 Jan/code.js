@@ -1,3 +1,23 @@
+
+// let a = [1,2,3,4,5,10,19,8,33,5];
+// let b = a.sort((a,b)=>a-b);
+// console.log("min:",b[0]);
+// console.log("max:",b[b.length-1]);
+// console.log(a[5]);
+// let max = a[0]; //1
+// let min = a[0]; //1
+// console.log('length:',a.length);
+// for(let i=0;i<a.length;i++){ //i=9
+//   if(a[i]>max){ //5>19
+//     max = a[i]; //max = 33
+//   }
+//   if(a[i]<min){ //2<1
+//     min = a[i];
+//   }
+// }
+// console.log(max,min);
+
+
 // OOPS: Object Oriented Programming
 // Encapsulation: 
 // Encapsulation is the practice of bundling data and methods into a single unit (a class) and hiding the internal state of the object from the outside world.
