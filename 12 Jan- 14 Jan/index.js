@@ -185,7 +185,7 @@
 // Feature	            Regular Function	          Arrow Function
 // this binding	        Dynamic (depends on caller)	  Lexical (inherited from parent)
 // new (Constructor)	✅ Yes	                    ❌ No
-// arguments object	    ✅ Yes	                    ❌ No (Use ...args)
+// arguments object	    ✅ Yes	                    ❌ No (Use ...args) //H.W
 // Implicit Return	    ❌ No	                    ✅ Yes (for one-liners)
 // Hoisting	            ✅ Yes (if declared)	        ❌ No (treated as variables)
 
@@ -278,24 +278,24 @@
 
 // Methods: Functions defined inside the class that represent the object's abilities.
 
-// class Car {
-//   // 1. Initializing the object's properties
-//   constructor(brand, color) {
-//     this.brand = brand;
-//     this.color = color;
-//     this.isEngineOn = false;
-//   }
+class Car {
+  // 1. Initializing the object's properties
+  constructor(brand, color) {
+    this.brand = brand;
+    this.color = color;
+    this.isEngineOn = false;
+  }
 
-//   // 2. Defining a method (behavior)
-//   startEngine() {
-//     this.isEngineOn = true;
-//     console.log(`The ${this.color} ${this.brand}'s engine is now roaring!`);
-//   }
-// }
+  // 2. Defining a method (behavior)
+  startEngine() {
+    this.isEngineOn = true;
+    console.log(`The ${this.color} ${this.brand}'s engine is now roaring!`);
+  }
+}
 
 // // 3. Creating an "Instance" (Object)
-// const myCar = new Car("Toyota", "Red");
-// myCar.startEngine(); // Output: The Red Toyota's engine is now roaring!
+const myCar = new Car("Toyota", "Red");
+myCar.startEngine(); // Output: The Red Toyota's engine is now roaring!
 
 
 // Important Rules for your Index

@@ -19,21 +19,26 @@
 
 
 // OOPS: Object Oriented Programming
+// In JavaScript, OOP (Object-Oriented Programming) is a programming paradigm that organizes
+//  code into Objects rather than just functions and logic. It allows you to group data (properties) and behaviors (methods) together into a single unit.
+
+
 // Encapsulation: 
 // Encapsulation is the practice of bundling data and methods into a single unit (a class) and hiding the internal state of the object from the outside world.
 // Keyword: # (Private fields) – JavaScript uses the hash symbol to make properties private.
 // Keyword: this – Refers to the current instance of the class.
 // JavaScript
-// class BankAccount { 
-// #balance = 0; // Private property 
-// constructor(owner) { this.owner = owner; } 
-// deposit(amount) { if (amount > 0) this.#balance += amount; } 
-// get getBalance() { return `Balance: $${this.#balance}`; } 
-// } 
-// const myAcc = new BankAccount("Alice"); 
-// myAcc.deposit(100); 
-// console.log(myAcc.getBalance); // "Balance: $100" // console.log(myAcc.#balance); // Error: Private field
-// The Blueprint: Class and Object
+// class BankAccount {
+//     #balance = 0; // Private property 
+//     constructor(owner) { this.owner = owner; }
+//     deposit(amount) { if (amount > 0) this.#balance = this.#balance + amount; }
+//     getBalance() { console.log(`Balance: ${this.#balance}`); }
+// }
+// const myAcc = new BankAccount("Keshav");
+// myAcc.deposit(100);
+// myAcc.getBalance(); // "Balance: $100" 
+// // console.log(myAcc.#balance); // Error: Private field
+// // The Blueprint: Class and Object
 
 // class Car {
 //   constructor(brand, color) {
@@ -47,7 +52,7 @@
 // }
 
 // const myCar = new Car("Tesla", "Red");
-// myCar.drive(); 
+// myCar.drive();
 
 // // Output: Tesla is driving!
 
@@ -82,11 +87,11 @@
 // myDog.eat(); // Inherited from Animal
 // myDog.bark(); // Its own method
 
-// // Output: 
-// // Eating...
-// // Woof!
+// Output:
+// Eating...
+// Woof!
 
-// 3.Abstraction: Abstraction means showing only the essential features and hiding the "how it works" logic. 
+// 3.Abstraction: Abstraction means showing only the essential features and hiding the "how it works" logic.
 // You just press a button; you don't need to know how the engine starts.
 
 // class CoffeeMachine {
@@ -101,27 +106,69 @@
 // }
 
 // const myCoffee = new CoffeeMachine();
-// myCoffee.start(); 
+// myCoffee.start();
 
 // // Output: Coffee is ready!
 
+
+
+// class SmartHeater {
+//   // Private methods (The "Complex" hidden logic)
+//   #checkGasLeak() {
+//     console.log("Checking for safety... No leaks found.");
+//     return true;
+//   }
+
+//   #igniteBurner() {
+//     console.log("Igniting the burner... 🔥");
+//   }
+
+//   // Public method (The "Simple" interface for the user)
+//   setTemperature(degrees) {
+//     console.log(`Setting target to ${degrees}°C...`);
+    
+//     if (this.#checkGasLeak()) {
+//       this.#igniteBurner();
+//       console.log("Heater is now running. Enjoy the warmth!");
+//     } else {
+//       console.log("Safety error: Cannot start heater.");
+//     }
+//   }
+// }
+
+// // --- Using the code ---
+// const myHeater = new SmartHeater();
+
+// // ABSTRACTION: The user only knows one "button"
+// myHeater.setTemperature(22);
+
+// // The user doesn't even know these exist:
+// // myHeater.#igniteBurner(); // Error: This would be dangerous!
+
+
+
+
 // 4.Polymorphism: Polymorphism allows different classes to have the same method name but perform different actions.
 
-// class Shape {
-//   draw() { console.log("Drawing a shape"); }
-// }
+class Shape {
+  draw() { console.log("Drawing a shape"); }
+}
 
-// class Circle extends Shape {
-//   draw() { console.log("Drawing a circle ⭕"); }
-// }
+class Circle extends Shape {
+  draw() { console.log("Drawing a circle ⭕"); } //Overrides the parent method
+}
 
-// class Square extends Shape {
-//   draw() { console.log("Drawing a square 🟦"); }
-// }
+class Square extends Shape {
+  draw() { console.log("Drawing a square 🟦"); }
+}
 
 // const shapes = [new Circle(), new Square()];
 // shapes.forEach(s => s.draw());
+// const shape = new Shape();
+// shape.draw();
+const shapeCircle = new Circle();
+shapeCircle.draw();
 
-// Output: 
+// Output:
 // Drawing a circle ⭕
 // Drawing a square 🟦
