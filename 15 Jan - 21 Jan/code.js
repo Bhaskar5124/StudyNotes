@@ -37,8 +37,8 @@
 // const myAcc = new BankAccount("Keshav");
 // myAcc.deposit(100);
 // myAcc.getBalance(); // "Balance: $100" 
-// // console.log(myAcc.#balance); // Error: Private field
-// // The Blueprint: Class and Object
+// console.log(myAcc.#balance); // Error: Private field
+// The Blueprint: Class and Object
 
 // class Car {
 //   constructor(brand, color) {
@@ -101,7 +101,10 @@
 //     console.log("Coffee is ready!");
 //   }
 
-//   #boilWater() { /* complex logic */ }
+//   #boilWater() { let a = 1;
+//     let b = 0;
+//     b= a+b;
+//    }
 //   #brewCoffee() { /* complex logic */ }
 // }
 
@@ -115,8 +118,8 @@
 // class SmartHeater {
 //   // Private methods (The "Complex" hidden logic)
 //   #checkGasLeak() {
-//     console.log("Checking for safety... No leaks found.");
-//     return true;
+//     console.log("Checking for safety...");
+//     return false;
 //   }
 
 //   #igniteBurner() {
@@ -135,40 +138,60 @@
 //     }
 //   }
 // }
-
 // // --- Using the code ---
 // const myHeater = new SmartHeater();
 
-// // ABSTRACTION: The user only knows one "button"
+// // // ABSTRACTION: The user only knows one "button"
 // myHeater.setTemperature(22);
 
 // // The user doesn't even know these exist:
-// // myHeater.#igniteBurner(); // Error: This would be dangerous!
+// myHeater.#igniteBurner(); // Error: This would be dangerous!
+
+//Encapsulation enables Abstraction
 
 
 
 
 // 4.Polymorphism: Polymorphism allows different classes to have the same method name but perform different actions.
 
-class Shape {
-  draw() { console.log("Drawing a shape"); }
-}
+// class Shape {
+//   draw() { console.log("Drawing a shape"); }
+// }
 
-class Circle extends Shape {
-  draw() { console.log("Drawing a circle ⭕"); } //Overrides the parent method
-}
+// class Circle extends Shape {
+//   draw() { console.log("Drawing a circle ⭕"); } //Overrides the parent method
+// }
 
-class Square extends Shape {
-  draw() { console.log("Drawing a square 🟦"); }
-}
+// class Square extends Shape {
+//   draw() { console.log("Drawing a square 🟦"); }
+// }
 
-// const shapes = [new Circle(), new Square()];
-// shapes.forEach(s => s.draw());
-// const shape = new Shape();
-// shape.draw();
-const shapeCircle = new Circle();
-shapeCircle.draw();
+// // const shapes = [new Circle(), new Square()];
+// // shapes.forEach(s => s.draw());
+// // const shape = new Shape();
+// // shape.draw();
+// const shapeCircle = new Circle();
+// shapeCircle.draw();
 
 // Output:
 // Drawing a circle ⭕
 // Drawing a square 🟦
+
+
+//Reversing a string
+//2 methods
+
+// function ulta(afs){
+//     let reverse ="";
+//     for(let i=afs.length -1; i>=0; i--){
+//         reverse += afs[i];
+//     }
+//  return reverse;
+//  }
+//   console.log(ulta("afsar"));
+
+
+
+// let a = "string";
+// let b = a.split("").reverse().join("");
+// console.log("reverse string: ",b);
