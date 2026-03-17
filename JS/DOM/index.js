@@ -2,88 +2,27 @@
 // let blueEl = document.querySelector('#blue')
 // let greenEl = document.querySelector('#green')
 
-let bodyEl = document.querySelector('body');
+// let bodyEl = document.querySelector('body');
 
-function handleRed(){ 
-    bodyEl.style.backgroundColor = "red"
-}
+// function handleRed(){ 
+//     bodyEl.style.backgroundColor = "red"
+// }
 
-function handleBlue(){ 
-    bodyEl.style.backgroundColor = "blue"
-}
+// function handleBlue(){ 
+//     bodyEl.style.backgroundColor = "blue"
+// }
 
-function handleGreen(){ 
-    bodyEl.style.backgroundColor = "green"
-}
+// function handleGreen(){ 
+//     bodyEl.style.backgroundColor = "green"
+// }
 
-function handleReset(){ 
-    bodyEl.style.backgroundColor = ""
-}
-
-
-let h1 = document.querySelector('h1');  //only for single element
-// let h1 = document.querySelector('#h1');
-// let h1 = document.querySelector('.h1');
-// let h1 = document.getElementsByClassName('head');  //can access one or more element if class is given to more than 1 element
-// let h1 = document.getElementById('head')
-// let a = document.querySelector('a');
-// let a = document.querySelector(".head");  //Select first single element with classname head
-// let a = document.querySelectorAll(".head") //Select all elements with classname head
-
-// a.setAttribute('href', "https://www.instagram.com");
-
-
-// h1.setAttribute('class' , 'class1', 'class2', 'class3') //❌
-// h1.setAttribute('class' , 'class1 class2 class3');
-
-
-// ----------------------
-// classList
-// 1. add()
-// h1.classList.add('class1', 'class2', 'class3');
-
-// ----------------------
-// 2. remove()
-// h1.classList.remove('class1' , 'class3')
-
-// ----------------------
-// 3. toggle()
-// h1.classList.toggle('class1')
-
-// ----------------------
-// 4. contains()
-// console.log( h1.classList.contains('class1') );
-// console.log( h1.classList.contains('punjab') );
-
-//-----------------------------------------------------------
-
-// let an = document.querySelector('a')
-// let inpEl = document.querySelector('input')
-
-
-// // // getter
-
-// let googleLink = an.getAttribute('href');
-// console.log("googleLink",googleLink);
-
-// // // // setter
-// let instaLink = "http://instagram.com"
-// an.setAttribute('href' , instaLink);
-// an.setAttribute('target',"_blank");
-
-
-// inpEl.setAttribute('type' , 'color')
-
-// // ----------------
-
-
-// console.log( document.querySelectorAll('h1') );
-// console.log( document.getElementsByTagName('h1') );
+// function handleReset(){ 
+//     bodyEl.style.backgroundColor = ""
+// }
 
 
 
-//---------------------------------------------------------------------------------------------
-
+//Selectors
 // 2 steps -> 1.selection    2.manipulation
 
 // 1. getElementsByTagName() -> array
@@ -150,10 +89,58 @@ let h1 = document.querySelector('h1');  //only for single element
 // let clas = document.querySelectorAll('.feb')
 // console.log(clas);
 // console.log(tag , idd , clas);
-
 //----------------------------------------------------------------------------------------------
 
 
+
+
+//Set and Get attribute
+
+// let h1 = document.querySelector('h1');  //only for single element
+
+// h1.setAttribute('class' , 'class1', 'class2', 'class3') //❌
+// h1.setAttribute('class' , 'class1 class2 class3');
+
+
+// ----------------------
+// classList
+// 1. add()
+// h1.classList.add('class1', 'class2', 'class3');
+
+// ----------------------
+// 2. remove()
+// h1.classList.remove('class1' , 'class3')
+
+// ----------------------
+// 3. toggle()
+// h1.classList.toggle('class1')
+
+// ----------------------
+// 4. contains()
+// console.log( h1.classList.contains('class1') );
+// console.log( h1.classList.contains('punjab') );
+
+
+
+
+// let an = document.querySelector('a')
+// getter
+
+// let googleLink = an.getAttribute('href');
+// console.log("googleLink",googleLink);
+
+// setter
+// let instaLink = "http://instagram.com"
+// an.setAttribute('href' , instaLink);
+// an.setAttribute('target',"_blank");
+
+//---------------------------------------------------------------------------------------
+
+
+
+
+
+//innerHTML, textContent and innerText
 // let h2 = document.querySelector('h2')
 
 
@@ -172,10 +159,16 @@ let h1 = document.querySelector('h1');  //only for single element
 // h2.innerText = "my name is don"
 // h2.textContent = "<span> my name is don </span>"
 // h2.innerHTML = "<span> my name is don </span>"
-//------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+
+
+
+
+
 
 //All appends
-let parentElement = document.getElementById("parent");
+
+// let parentElement = document.getElementById("parent");
 // let h3 = document.createElement('h3');
 // h3.textContent = "I am h3";
 
@@ -188,26 +181,11 @@ let parentElement = document.getElementById("parent");
 
 
 // // appendChild: Needs an object
-let span = document.createElement('span');
-span.textContent = "I am span";
-let appendedChild =  parentElement.appendChild(span); 
-console.log(appendedChild);
+// let span = document.createElement('span');
+// span.textContent = "I am span";
+// let appendedChild =  parentElement.appendChild(span); 
+// console.log(appendedChild);
 // // parent.appendChild("Hello"); // Error!
-
-// // append: Accepts text directly
-// parent.append("Hello World"); // Works perfectly
-
-
-// appendChild
-// div.appendChild(h3);
-
-// // append (Multiple items at once)
-// div.append(h3, "Some text", document.createElement('span'));
-
-
-// const returnedNode = parentElement.appendChild(h3);
-// console.log(returnedNode); // returnedNode === child
-// const result = parent.append(child);            // result === undefined
 
 
 // Feature,             append(),                                                appendChild()
@@ -217,10 +195,23 @@ console.log(appendedChild);
 // Accepts Strings,     Yes (automatically creates Text Nodes).,                 No (only accepts Node objects).
 // Return Value,        undefined,                                               The inserted Node.
 // Browser Support      Modern browsers (No IE support).,                        All browsers (including Internet Explorer).
-//-----------------------------------------------------------------------------------------------------------------------------------
 
 
 
+
+//prepend
+// let h3 = document.createElement('h3');
+// h3.textContent = 'I am h3 by prepend'
+// parentElement.prepend(h3);
+
+
+// insertBefore
+
+// let h2 = document.querySelector('h2');
+// let h3 = document.createElement('h3');
+// h3.textContent = 'I am h3 by insertBefore';
+// parentElement.insertBefore(h3,h2);
+// parentElement.prepend(h3,h2);
 
 //prepend and insertBefore
 
@@ -231,15 +222,10 @@ console.log(appendedChild);
 // Accepts Strings,     Yes (automatically creates Text Nodes).,        No (only accepts Node objects).
 // Return Value,        undefined,                                      The inserted Node.
 // Browser Support      Modern browsers (No IE support).,               All browsers (including Internet Explorer).
-//prepend
-// parentElement.prepend(h3);
-//insertBefore
+//-----------------------------------------------------------------------------------------------------------------------------------
 
-// let h2 = document.querySelector('h2');
-// parentElement.insertBefore(h3,h2);
-// parentElement.prepend(h3,h2);
 
-//-----------------------------------------------------------------------------------------------------
+
 
 //Carousel
 
@@ -258,10 +244,10 @@ console.log(appendedChild);
 //     imgEl.src = arrImg[n]
 //     n = (n+1)%arrImg.length;
 // } , 2000)
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 
-
-//Events
+//Events/Actions Handling
 
 // 2nd way
 // let divEl = document.querySelector('div');
@@ -293,7 +279,7 @@ console.log(appendedChild);
 // //     console.log("hello from sam2"); 
 // // }
 
-// // // divEl.addEventListener('click' , function(){})
+// // // divEl.addEventLiwstener('click' , function(){})
 // divEl.addEventListener('click' , sam1)
 // divEl.addEventListener('click' , sam2)
 
@@ -326,15 +312,11 @@ console.log(appendedChild);
 //     console.log(inpEl.value);
 // })
 
-// -------------------------------
-
-// let inpEl = document.querySelector('input');
-// let h1El = document.querySelector('h1');
 
 
 
 
-
+//Events
 
 // In JavaScript, events are the heartbeat of interactive web applications. When anything happens on your page—a user clicks, a key is pressed, or a page finishes loading—the browser generates an "Event Object."
 
@@ -414,4 +396,3 @@ console.log(appendedChild);
 //     h1El.innerHTML = inpEl.value
 // })
 
-// ----------------------------------

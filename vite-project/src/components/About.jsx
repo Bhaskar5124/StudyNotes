@@ -7,11 +7,11 @@ function About() {
 
   function handleHome(){
     setn(prev=>prev+1);
-    navigate("/");
-    // let time = setTimeout(()=>{
-    //   navigate("/");
-    //   clearTimeout(time);
-    // },3000)
+    // navigate("/");
+    let time = setTimeout(()=>{
+      navigate("/");
+      clearTimeout(time);
+    },3000)
     
   }
 

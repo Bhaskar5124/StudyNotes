@@ -17,9 +17,11 @@ const E = () => {
 
 
 const B = () => {
+  // let daku = useContext(countContext);
   return (
     <div>
         <h1>B</h1>
+        {/* <h1>Daku = {daku}</h1> */}
         <C />
     </div>
   )
@@ -27,11 +29,11 @@ const B = () => {
 
 
 const C = () => {
-  // let don = useContext(countContext);
+  let don = useContext(countContext);
   return (
     <div>
       <h1>C</h1>
-        {/* <h1>C : {don}</h1> */}
+        <h1>C : {don}</h1>
         <D /> 
     </div>
   )

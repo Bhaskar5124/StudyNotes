@@ -21,6 +21,7 @@ import HomeHook from './components/CustomHook'
 import ControlledInput from './components/ControlledInput'
 import SetStorage from './components/SetStorage'
 import Storage from './components/Storage'
+import CounterRedux from './components/CounterRedux'
 
 function App() {
 
@@ -46,9 +47,11 @@ function App() {
     {/* <Storage/> */}
 
 
-    <Header/>
+      <CounterRedux/>
+
+    {/* <Header/>
     <Outlet/>
-    <Footer/>
+    <Footer/> */}
     </>
   )
 }

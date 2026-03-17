@@ -14,7 +14,6 @@ async function page() {
           <p>Desc: {item.desciption}</p>
         </div>))}
     </div>
-
   )
 }
 

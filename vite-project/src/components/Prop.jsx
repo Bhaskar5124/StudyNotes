@@ -11,8 +11,8 @@ function Prop({name,num}) {
     </div>
   )
 }
-export default memo(Prop);
-// export default React.memo(Prop);
+// export default memo(Prop);
+export default React.memo(Prop);
 // export default Prop;
 
 

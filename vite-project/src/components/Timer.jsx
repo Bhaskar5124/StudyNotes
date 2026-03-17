@@ -18,9 +18,9 @@ const Timer = () => {
 
   function handleStart(){
     
-    if(active){
-      window.alert("Timer is already runnning");
-      return;}
+    // if(active){
+    //   window.alert("Timer is already runnning");
+    //   return;}
 
     setActive(true);
     let timer = setInterval(()=>{
@@ -44,7 +44,7 @@ const Timer = () => {
   return (
     <div>
       <h1>Timer in seconds: {time}</h1>
-      <button onClick={handleStart}>Start</button>
+      <button disabled={active} onClick={handleStart}>Start</button>
       <button onClick={handleStop}>Stop</button>
       <button onClick={handleReset}>Reset</button>
     </div>

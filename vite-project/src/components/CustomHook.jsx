@@ -18,12 +18,11 @@ import { useEffect, useState } from "react";
 //     </>
 //   );
 // };
-// export default HomeHook;
 
 //-------------------------------------------------------------
 
 
-//custom hooks always starts with use
+// custom hooks always starts with use
 const useFetch = (url) => {
   const [data, setData] = useState(null);
 

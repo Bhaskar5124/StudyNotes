@@ -49,9 +49,9 @@ const ProductList = () => {
       {data && (
         <ul className="mt-4">
           {data.map(product => (
-            <div>
+            <div key={product.id}>
                 <img src={product.images[0]}/>
-                <li key={product.id} className="border-b py-2">{product.title}</li>
+                <li className="border-b py-2">{product.title}</li>
             </div>
           ))}
         </ul>

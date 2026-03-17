@@ -18,7 +18,7 @@ function Storage() {
     let num = localStorage.getItem('ls');
 
     localStorage.removeItem('ls');
-    // localStorage.removeItem('data');
+
   return (
     <div>Storage
         <h1>ss: {q}</h1>
