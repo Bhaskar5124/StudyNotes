@@ -27,12 +27,12 @@ function App() {
 
   return (
     <>
-    {/* <Hello2/>
-    <Hello3/> */}
+    {/* <Hello2/> */}
+    {/* <Hello3/> */}
     {/* <Hello/> */}
     {/* <Counter/> */}
     {/* <AndLogical/> */}
-    {/* <Effect/> */}
+    <Effect/>
     {/* <Timer/> */}
     {/* <FocusableInput/> */}
     {/* <Mem/> */}
@@ -47,7 +47,7 @@ function App() {
     {/* <Storage/> */}
 
 
-      <CounterRedux/>
+      {/* <CounterRedux/> */}
 
     {/* <Header/>
     <Outlet/>

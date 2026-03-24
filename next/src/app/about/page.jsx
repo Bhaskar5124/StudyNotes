@@ -11,7 +11,7 @@ async function page() {
         <div key={item.id}>
           <img src={item.images[0]}/>
           <h1>Title: {item.title}</h1>
-          <p>Desc: {item.desciption}</p>
+          <p>Desc: {item.description}</p>
         </div>))}
     </div>
   )

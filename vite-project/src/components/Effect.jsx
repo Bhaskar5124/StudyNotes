@@ -8,10 +8,10 @@ function Effect(){
 
     useEffect(()=>{
         // console.log("I run everytime");
-        // console.log("I run only once");
-        console.log("I run only when variable change");
+        console.log("I run only once");
+        // console.log("I run only when variable change");
 
-    },[n,num]);
+    },[count]);
 
     //setInterval
     //setTimeout
@@ -51,7 +51,7 @@ function Effect(){
 // useEffect(()=>{},[n])
 // When there is no dependency array, useEffect code will run on every render
 // When there is a dependency array but blank, code inside useEffect will run only once
-// When there is any variable, then useEffect code will run when that variable change
+// When there is any variable inside dependency Array, then useEffect code will run when that variable change
 
 //Ui Condition &&
 
@@ -59,8 +59,7 @@ function Effect(){
     return (
         <div>
             <h1>UseEffect</h1>
-            <h1>Timer</h1>
-            <h1>Secconds: {count}</h1>
+            <h1>Count: {count}</h1>
             <button onClick={()=>setCount((k)=>k+1)}>INC count</button>
             <h3>Num : {num}</h3>
             <button onClick={handleInc}>INC</button>

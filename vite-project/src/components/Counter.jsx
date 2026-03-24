@@ -12,11 +12,12 @@ function Counter() {
       //Batching: React groups multiple state changes into single re-render to optimize performance,
       //waits until entire event handler is finished
       // seta(a+1); //Initail State =  0
-      // seta(a+1); //Initail State =  0
+      // seta(a+2); //Initail State =  0
       // seta(a+1); //Initail State =  0
       // seta(a+3);
+      // seta(prev=>prev+3)
       // seta(a+1);
-      seta(kul=>kul+1);
+      // seta(kul=>kul+1);
       // seta(kul=>kul+1);
       // seta(kul=>kul+1);
     }
@@ -31,7 +32,7 @@ function Counter() {
 
         <h1>Num : {num}</h1>
         <button onClick={handleDec}>Dec</button>
-        <Prop name="Irfan khan" num={num}/>
+        {/* <Prop name="Irfan khan" num={num}/> */}
     </div>
   )
 }

@@ -6,6 +6,7 @@ export default async function UserProfile({ params }) {
   // 2. Await the params before using them
   const resolvedParams = await params;
   const id = resolvedParams.id;
+  
 
   return (
     <div className="p-10 max-w-2xl mx-auto">

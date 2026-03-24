@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function Hello(){
 
     let [n,setn] = useState(0);
@@ -11,7 +12,7 @@ function Hello(){
         console.log(n);
     }
 
-    // console.log(n);
+    
 
     return(
         <div>
@@ -23,7 +24,7 @@ function Hello(){
     )
 }
 
-// export default Hello; 
+export default Hello; 
 
 
 // function Hello(){
@@ -37,7 +38,7 @@ function Hello(){
 // }
 
 
-export default Hello;
+// export default Hello;
 
 
 export function Hello2(){

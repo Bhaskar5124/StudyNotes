@@ -11,11 +11,11 @@ import { store } from './utils/store.js';
 import { Provider } from 'react-redux';
 const About = lazy(() => import('./components/About.jsx'));
 
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
 
 // let myAppRoute = createBrowserRouter([
 //   {
@@ -59,10 +59,10 @@ const About = lazy(() => import('./components/About.jsx'));
 //   <RouterProvider router={myAppRoute}></RouterProvider>
 // )
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </StrictMode>,
-)
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <Provider store={store}>
+//       <App />
+//     </Provider>
+//   </StrictMode>,
+// )

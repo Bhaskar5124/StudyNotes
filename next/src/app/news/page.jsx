@@ -14,6 +14,8 @@ export default function InteractivePoll() {
     setHasVoted(true);
   };
 
+
+  //rendering time error
   if(error){
     throw new Error();
   }

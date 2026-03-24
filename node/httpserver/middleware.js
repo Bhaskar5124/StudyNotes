@@ -2,8 +2,8 @@
 // const app  = express();
 
 // // middleware
-// runs on every incoming request
-// has access of both req,res and next
+// // runs on every incoming request
+// // has access of both req,res and next
 
 
 
@@ -12,6 +12,7 @@
 //     // res.send("mai middleware hu") //req-res cycle ended here
 //     next();
 // })
+
 // app.use((req,res,next)=>{
 //     console.log("middleware-2");
 //     next();
@@ -19,10 +20,12 @@
 
 // // root route
 // app.get('/' , (req,res)=>{
+//     console.log("Home");
 //     res.send('<h1>I AM ROOT ROUTE</h1>')
 // }) 
 
 // app.get('/about' , (req,res)=>{
+//     console.log('About');
 //     res.send('<h1>I AM ABOUT ROUTE</h1>')
 // })
 
@@ -40,6 +43,7 @@ const app  = express();
 
 // app.use( (req,res,next)=>{
 app.use('/sam' , (req,res,next)=>{
+    console.log('Middleware');
     let username = req.query.username;
     if(username === "bhaskar"){
         next()
@@ -51,6 +55,10 @@ app.use('/sam' , (req,res,next)=>{
 
 app.get('/sam' , (req,res)=>{
     res.send('<h1>I AM SAM ROUTE</h1>')
+})
+
+app.get('/', (req,res)=>{
+    res.send("I am Home");
 })
 
 const PORT = 5050;

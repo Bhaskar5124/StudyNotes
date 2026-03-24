@@ -11,7 +11,7 @@ app.listen(PORT,()=>{
 app.use(express.json());
 
 app.use((req,res,next)=>{
-    console.log(req.method);
+    console.log("Middleware:",req.method);
     next();
 });
 
@@ -71,14 +71,21 @@ app.put('/user/:id',(req,res)=>{
     }
 });
 
-app.delete('/user/:id',(req,res)=>{
-    const deluser = users.find(user=>user.id == req.params.id);
+// app.delete('/user/:id',(req,res)=>{
+//     const deluser = users.find(user=>user.id == req.params.id);
         
-    if(!deluser){
-        res.status(404).json({message:"User with this ID does not exist"})
-    }
-    else{
-        const filteredusers = users.filter((user)=>user.id != req.params.id);
-        res.send(filteredusers);
-    }
+//     if(!deluser){
+//         res.status(404).json({message:"User with this ID does not exist"})
+//     }
+//     else{
+//         const filteredusers = users.filter((user)=>user.id != req.params.id);
+//         res.send(filteredusers);
+//     }
+// });
+
+
+app.delete('/user/:id',(req,res)=>{
+    const deluserid = Number(req.params.id);
+    users.splice(deluserid-1,1);
+    res.send(users);
 });
