@@ -5,7 +5,7 @@ export default function Error({ error, reset }) {
     <div>
         <h1>Contact Route Error</h1>
       <h2>Something went wrong!</h2>
-      {/* <button onClick={() => reset()}>Try again</button> */}
+      <button onClick={() => reset()}>Try again</button>
     </div>
   )
 }

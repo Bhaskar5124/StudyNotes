@@ -7,12 +7,12 @@ function Prop({name,num}) {
   return (
     <div>
         <h1>Name: {name}</h1>
-        <h1>Val: {num}</h1>
+        <h1>NUM: {num}</h1>
     </div>
   )
 }
-// export default memo(Prop);
-export default React.memo(Prop);
+export default memo(Prop);
+// export default React.memo(Prop);
 // export default Prop;
 
 

@@ -1,16 +1,18 @@
 import { useRef, useEffect } from 'react';
 
 function FocusableInput() {
-  const inputRef = useRef(null);
+  const inputRef = useRef();
 
   useEffect(() => {
     // Focus the input when the component mounts
     inputRef.current.focus();
     inputRef.current.placeholder = "Write your name";
-    console.log(inputRef.current);
+    console.log(inputRef);
   }, []);
 
-  return <input className='border border-red-200' ref={inputRef} type="text" />;
+  return (
+    <input className='border border-red-200' ref={inputRef} type="text" />
+  );
 }
 
 export default FocusableInput;

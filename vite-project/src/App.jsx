@@ -32,10 +32,10 @@ function App() {
     {/* <Hello/> */}
     {/* <Counter/> */}
     {/* <AndLogical/> */}
-    <Effect/>
+    {/* <Effect/> */}
     {/* <Timer/> */}
     {/* <FocusableInput/> */}
-    {/* <Mem/> */}
+    <Mem/>
     {/* <Callback/> */}
     {/* <A/> */}
     {/* <E/> */}

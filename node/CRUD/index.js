@@ -2,6 +2,7 @@ import express from 'express';
 const app = express(); //instance of app -> poori application
 import mongoose  from 'mongoose';
 import {commentRoutes} from './routes/comment.routes.js'
+import { userRoutes } from './routes/user.routes.js';
 
 
 //Install Mongodb Compass
@@ -22,8 +23,8 @@ app.get('/' , (req,res)=>{
 })
 
 // middleware
-commentRoutes(app)
-
+commentRoutes(app);
+userRoutes(app);
 const PORT = 8000;
 app.listen(PORT , ()=>{
     console.log(`SERVER CONNECTED AT PORT : ${PORT}`); 

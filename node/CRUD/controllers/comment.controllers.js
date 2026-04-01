@@ -28,7 +28,7 @@ export async function editComment(req,res){
     try{
         let {id} = req.params; 
         let {comment} = req.body;
-        let editedComment = await Comments.findByIdAndUpdate(id , {comment}); 
+        let editedComment = await Comments.findByIdAndUpdate(id , {comment}, {new:true}); 
         //{new:true} //without this, it will not show the latest edited comment, but will show the old comment
         res.status(200).json({
             message:"edited succesfully",

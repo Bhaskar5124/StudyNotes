@@ -1,24 +1,26 @@
 // let a = [1,2,3,4];
 // console.log(typeof(a));
 
-let a = 1;
-console.log(typeof(a));
+// let a = 1;
+// console.log(typeof(a));
 
-let b = "abc";
-console.log(typeof(b));
+// let b = "abc";
+// console.log(typeof(b));
 
-let c = true;
-console.log(typeof(c));
+// let c = true;
+// console.log(typeof(c));
 
-let d;
-console.log(typeof(d));
+// let d;
+// console.log(typeof(d));
 
-let e = Symbol();
-console.log(typeof(e));
+// let e = Symbol();
+// console.log(typeof(e));
 
-let f = Symbol();
-console.log(e===f);
+// let f = Symbol();
+// console.log(e===f);
 
+// let g = null;
+// console.log(typeof(g));
 // In JavaScript, there is a very famous "quirk" (or bug) when it comes to checking the type of null. If you try to print it, you will get a surprising result.
 
 // The Code

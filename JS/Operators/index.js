@@ -19,14 +19,14 @@
 // console.log("math power",Math.pow(2,3));
 //explore math
 
-//Increment ++
+//Increment ++ = Increment by 1
 
-//Decrement --
+//Decrement -- = Decrement by 1
 
 // let a = 5;
-// a++;
+// a++; // a=a+1
 // console.log(a)//6
-// a--;
+// a--; // a=a-1
 // console.log(a);//5
 
 
@@ -58,8 +58,8 @@
 
 // let a = 10;
 // let b = 7;
-// // a+=b;
-// console.log(a+=b);
+// // a+=b; // a=a+b
+// console.log(a+=b); 
 // console.log(a-=b);
 // console.log(a*=b);
 // console.log(a/=b);
@@ -73,14 +73,14 @@
 
 // let a = 3;
 // let b = 2;
-// if(a==1 || b==2){
+// if(a==2 || b==1){
 //     console.log("IF answer is true");
 // }else{
 //     console.log("IF answer is not true");
 // }
 
 
-// let a = false;
+// let a = true;
 // console.log(!a);
 
 //if

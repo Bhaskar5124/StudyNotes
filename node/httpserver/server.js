@@ -1,5 +1,5 @@
 // const http = require('http');
-import http from 'http';
+// import http from 'http';
 
 // const server = http.createServer((req,res)=>{
 //     if(req.url == "/about" && req.method=='GET'){
@@ -95,6 +95,25 @@ app.post('/shinchan' , (req,res)=>{
 // * **Data sent:** `{"username": "johndoe", "password": "123"}`
 // * **Usage:** Sending sensitive data or complex objects.
 // * **Access in Express:** `req.body.username` (requires `express.json()` middleware).
+
+
+// 4. req.headers
+// Metadata about the request.
+//  * Definition: Information about the browser, the type of data being sent (content-type), and security credentials.
+//  * Usage: Checking req.headers.authorization to verify a JSON Web Token (JWT) before allowing access to a protected route.
+
+
+// 5. req.ip and req.protocol
+//  * Definition: req.ip is the remote IP address of the request; req.protocol is either http or https.
+//  * Usage: Rate limiting (to prevent bots from spamming your API) or redirecting users to secure connections.
+// How it looks in code
+// app.post('/user/:id', (req, res) => {
+//   console.log(req.params.id);    // The ID from the URL
+//   console.log(req.query.token);  // A token from the query string (?token=xyz)
+//   console.log(req.body.name);    // The name from the submitted JSON
+  
+//   res.send("Request processed!");
+// });
 
 // ---
 

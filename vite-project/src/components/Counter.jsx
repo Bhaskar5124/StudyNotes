@@ -19,7 +19,7 @@ function Counter() {
       // seta(a+1);
       // seta(kul=>kul+1);
       // seta(kul=>kul+1);
-      // seta(kul=>kul+1);
+      seta(kul=>kul+1);
     }
 
     function handleDec(){
@@ -32,7 +32,7 @@ function Counter() {
 
         <h1>Num : {num}</h1>
         <button onClick={handleDec}>Dec</button>
-        {/* <Prop name="Irfan khan" num={num}/> */}
+        <Prop name="Irfan khan" num={num}/>
     </div>
   )
 }

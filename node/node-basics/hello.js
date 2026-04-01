@@ -1,4 +1,4 @@
-// console.log("Helloworld!");
+console.log("Helloworld!");
 
 // console.log("Hello");
 
@@ -7,6 +7,6 @@ export function square(a){
 }
 
 
-// module.exports = {squarefn:square};
+// module.exports = {squarekeshav:square};
 // module.exports = {square:square};
 // module.exports = {square};

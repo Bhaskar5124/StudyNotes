@@ -5,10 +5,11 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Error from './components/Error.jsx';
 import Home from './components/Home.jsx';
-// import About from './components/About.jsx';
+
 import Bookdetails from './components/Bookdetails.jsx';
 import { store } from './utils/store.js';
 import { Provider } from 'react-redux';
+// import About from './components/About.jsx';
 const About = lazy(() => import('./components/About.jsx'));
 
 createRoot(document.getElementById('root')).render(

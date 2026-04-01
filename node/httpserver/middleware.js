@@ -3,9 +3,7 @@
 
 // // middleware
 // // runs on every incoming request
-// // has access of both req,res and next
-
-
+// // has access of all req,res and next
 
 // app.use((req,res,next)=>{
 //     console.log("middleware-1");
@@ -37,7 +35,7 @@
 
 
 // // ---------------------------------------------------
-// http://localhost:5050/sam?username=bhaskar
+// http://localhost:5050/sam?username=sam
 import express from 'express';
 const app  = express();
 
@@ -45,7 +43,7 @@ const app  = express();
 app.use('/sam' , (req,res,next)=>{
     console.log('Middleware');
     let username = req.query.username;
-    if(username === "bhaskar"){
+    if(username === "sam"){
         next()
     }
     else{
@@ -79,8 +77,7 @@ app.listen(PORT , ()=>{
 //         next();
 //     }else{
 //         res.send("Invalid Parameter");
-//     }
-    
+//     }  
 // })
 
 // app.get('/sam/:id' , (req,res)=>{

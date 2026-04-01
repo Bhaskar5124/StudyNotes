@@ -5,16 +5,16 @@ const Timer = () => {
   let [timerid, setTimerId] = useState(null);
   let [active, setActive] = useState(false);
 
-  // useEffect(()=>{
-  //   if(active){
-  //     let timer = setInterval(()=>{
-  //       setTime(x=>x+1);
-  //     },1000)
-  //     setTimerId(timer);
-  //   }else{
-  //     clearInterval(timerid);
-  //   }
-  // },[active])
+  useEffect(()=>{
+    if(active){
+      let timer = setInterval(()=>{
+        setTime(x=>x+1);
+      },1000)
+      setTimerId(timer);
+    }else{
+      clearInterval(timerid);
+    }
+  },[active])
 
   function handleStart(){
     
@@ -23,21 +23,21 @@ const Timer = () => {
     //   return;}
 
     setActive(true);
-    let timer = setInterval(()=>{
-      setTime(x=>x+1);
-    },1000)
-    setTimerId(timer);
+    // let timer = setInterval(()=>{
+    //   setTime(x=>x+1);
+    // },1000)
+    // setTimerId(timer);
 
   }
 
   function handleStop(){
-    clearInterval(timerid);
+    // clearInterval(timerid);
     setActive(false);
   }
 
   function handleReset(){
     setTime(0);
-    clearInterval(timerid);
+    // clearInterval(timerid);
     setActive(false);
   }
 
