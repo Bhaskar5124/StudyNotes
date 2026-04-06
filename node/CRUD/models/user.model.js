@@ -33,6 +33,12 @@ const userSchema = new mongoose.Schema({
     hobby: {
         type: String,
         default: "I like to use this app"
+    },
+    image: {
+        type: String,
+        required: [true, "Profile picture is required"],
+        // You can also set a default placeholder image URL here
+        default: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg"
     }
 }, { timestamps: true });
 

@@ -9,7 +9,12 @@ const commentSchema = new mongoose.Schema({
         // min: 3,
         // max: 10,
         // unique: true
-    }
+    },
+    // author: {
+    //     type: mongoose.Schema.Types.ObjectId, 
+    //     ref: 'User', // This must match the name used in mongoose.model('User', ...)
+    //     required: true
+    // },
 });
 
 

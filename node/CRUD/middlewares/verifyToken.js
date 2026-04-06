@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "../config/keyConfig.js";
 
 export const verifyToken = (req, res, next) => {
     // 1. Grab the token from the Header
@@ -14,7 +15,7 @@ export const verifyToken = (req, res, next) => {
         const token = authHeader.split(" ")[1];
 
         // 4. Verify the token with your Secret Key
-        const verified = jwt.verify(token, process.env.JWT_SECRET);
+        const verified = jwt.verify(token, JWT_SECRET);
         console.log('verified', verified)
         // 5. Save the user data into the 'req' object for the controller to use
         req.user = verified;

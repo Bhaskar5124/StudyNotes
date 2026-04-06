@@ -54,7 +54,7 @@ import fs from 'fs/promises';
 //     }
 // }
 
-// // reading();
+// // // reading();
 // let readingResult = await reading();
 // console.log(readingResult);
 
@@ -70,18 +70,18 @@ import fs from 'fs/promises';
 
 
 
-async function folderDeletion(){
-    try{
-        // await fs.rm('./Practice');
-        await fs.rm('./Practice', {recursive: true, force: true});
-    }catch(e){
-        console.log('Message:', e.message);
-    }
+// async function folderDeletion(){
+//     try{
+//         // await fs.rm('./Practice');
+//         await fs.rm('./Practice', {recursive: true, force: true});
+//     }catch(e){
+//         console.log('Message:', e.message);
+//     }
     
     
-}
+// }
 
-folderDeletion();
+// folderDeletion();
 
 
 

@@ -9,11 +9,11 @@ const fs = require('fs/promises')
 //Blocking
 //Creates files if file do not exist
 //Overwrites data to existing file
-// const data = "Sam -> 8889999999"
+// const data = "Dog -> 8889999999"
 // fs.writeFileSync('./test.txt' , data, 'utf8');
 
 
-// const data2 = "\n Maverick -> 9999999999"
+// const data2 = "\n TopGun -> 9999999999"
 // fs.writeFileSync('./test.txt' , data2 )
 
 
@@ -86,9 +86,9 @@ const fs = require('fs/promises')
 // hello();
 // console.log(20);
 
-const os = require('os');
-console.log( os.cpus());
-console.log( os.cpus().length );
+// const os = require('os');
+// console.log( os.cpus());
+// console.log( os.cpus().length );
 
 
 // ## Summary
