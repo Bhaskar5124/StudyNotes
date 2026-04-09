@@ -34,8 +34,8 @@ function App() {
     {/* <AndLogical/> */}
     {/* <Effect/> */}
     {/* <Timer/> */}
-    {/* <FocusableInput/> */}
-    <Mem/>
+    <FocusableInput/>
+    {/* <Mem/> */}
     {/* <Callback/> */}
     {/* <A/> */}
     {/* <E/> */}

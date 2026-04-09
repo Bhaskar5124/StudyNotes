@@ -83,6 +83,8 @@ export const updateUser = async (req, res) => {
             req.user.id, 
             updateData, 
             { new: true, runValidators: true }
+            // runValidators: true: Remember those rules in your Schema (like minLength or required)? 
+            // Normally, findByIdAndUpdate skips them. This setting forces Mongoose to check your rules again to make sure the new data is valid.
         );
 
         if (!updatedUser) return res.status(404).json({ message: "User not found" });

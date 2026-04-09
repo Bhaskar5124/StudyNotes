@@ -5,6 +5,20 @@ export async function getComment(req, res) {
     try {
         // Filter by the author ID extracted from the JWT
         const myComments = await Comments.find({ author: req.user.id }).sort({ createdAt: -1 });
+
+        // 1. Comments.find({ author: req.user.id })
+        // The Filter: This tells MongoDB, "Don't give me every comment in the database. Only give me the ones where the author field matches the ID of the person currently logged in."
+
+        // Why it's secure: We use req.user.id (which comes from the JWT token), not something the user typed in a box. This ensures User A can never accidentally (or intentionally) see User B's private comment list.
+
+        // 2. .sort({ createdAt: -1 })
+        // The Order: This organizes the results.
+
+        // -1 means "Descending": It puts the newest comments at the top and the oldest at the bottom.
+
+        // 1 would mean "Ascending": It would show the oldest comments first.
+
+        // Requirement: This only works because you added timestamps: true to your Mongoose schema.
         return res.status(200).json(myComments);
     } catch (err) {
         return res.status(500).json({ message: err.message });
@@ -25,6 +39,7 @@ export async function createComment(req, res) {
         });
 
         const populatedComment = await newComment.populate("author", "userName image");
+        
         return res.status(201).json({ message: "New comment Created", comment: populatedComment });
     } catch (err) {
         return res.status(500).json({ message: err.message });

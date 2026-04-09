@@ -27,6 +27,8 @@ app.get('/' , (req,res)=>{
 // middleware
 commentRoutes(app);
 userRoutes(app);
+
+
 const PORT = 8000;
 app.listen(PORT , ()=>{
     console.log(`SERVER CONNECTED AT PORT : ${PORT}`); 
