@@ -1,6 +1,6 @@
 
-const fs = require('fs/promises') 
-// const fs = require('fs') //node + extrernally installed
+// const fs = require('fs/promises') 
+const fs = require('fs') //node + extrernally installed
 // const http = require('http') //node + extrernally installed
 // console.log(fs);
 

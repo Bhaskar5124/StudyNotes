@@ -33,7 +33,7 @@ import { JWT_SECRET } from "../config/keyConfig.js";
 //     }
 // };
 
-// --- LOGIN ---
+// --- LOGIN Without Cookies ---
 export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -96,7 +96,7 @@ export async function allUsers(req,res){
 }
 
 
-// Pro-Tip for your Students: The "Variables" Trick
+// The "Variables" Trick
 // Copying and pasting a new token every time you log in is annoying. Tell your students to:
 
 // Go to the Login request.
@@ -154,4 +154,62 @@ export const register = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
+};
+
+
+
+
+//Using Cookies
+
+// To use cookies in Express, 
+// you'll need the cookie-parser middleware installed (npm install cookie-parser) 
+// and registered in your main server file with app.use(cookieParser()).
+
+export const cookieLogin = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+
+        // 1. Find user by email
+        const user = await User.findOne({ email });
+        if (!user) return res.status(404).json({ message: "User not found" });
+
+        // 2. Compare passwords
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
+
+        // 3. Generate JWT Token
+        const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
+
+        // 4. Set the Cookie and send User Data
+        res.status(200)
+            .cookie("token", token, {
+                httpOnly: true, // ✅ JavaScript cannot access this (prevents XSS)
+                secure: false,
+                // secure: process.env.NODE_ENV === "production", // ✅ Send only over HTTPS in production
+                sameSite: "strict", // ✅ Prevents CSRF attacks
+                maxAge: 3600000,    // ✅ Cookie expires in 1 hour (matching JWT)
+            })
+            .json({ 
+                message: "Logged in successfully",
+                user: { 
+                    id: user._id, 
+                    userName: user.userName, 
+                    image: user.image,
+                    bio: user.bio 
+                } 
+            });
+
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+
+
+export const logout = (req, res) => {
+    res.cookie("token", "", {
+        httpOnly: true,
+        expires: new Date(0), // Sets expiration to 1970 (immediate expiry)
+        sameSite: "strict",
+    }).status(200).json({ message: "Logged out successfully" });
 };

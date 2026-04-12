@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import cookieParser from "cookie-parser";
 const app = express(); //instance of app -> poori application
 import mongoose  from 'mongoose';
 import {commentRoutes} from './routes/comment.routes.js'
@@ -18,6 +19,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/crud')// returns a promise
 
 app.use(cors());
 app.use(express.json()); //body parsing middleware
+app.use(cookieParser());
 
 // root route
 app.get('/' , (req,res)=>{

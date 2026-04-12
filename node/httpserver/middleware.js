@@ -1,9 +1,9 @@
 // import express from 'express';
 // const app  = express();
 
-// // middleware
-// // runs on every incoming request
-// // has access of all req,res and next
+// middleware
+// runs on every incoming request
+// has access of all req,res and next
 
 // app.use((req,res,next)=>{
 //     console.log("middleware-1");
