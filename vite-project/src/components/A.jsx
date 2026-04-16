@@ -11,6 +11,7 @@ let [count,setCount] = useState(0);
   )
 }
 
+
 const B = ({count}) => {
   return (
     <div>
@@ -29,6 +30,7 @@ const C = ({count}) => {
     </div>
   )
 }
+
 
 const D = ({count}) => {
   return (

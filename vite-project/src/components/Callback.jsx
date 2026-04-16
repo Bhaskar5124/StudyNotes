@@ -8,6 +8,7 @@ function Callback() {
   // const printHello = () => {
   //   console.log("Hello!");
   // };
+  
   const printHello = useCallback(() => {
     console.log("Hello!");
   }, [num]);

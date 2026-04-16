@@ -51,6 +51,9 @@ const Home2 = () => {
         method: "POST",
         // IMPORTANT: Remove 'Content-Type' header. 
         // The browser sets it automatically to 'multipart/form-data' with a boundary.
+
+        // ✅ NEW: Include credentials to accept cookies from the server
+        // credentials: "include",
         body: dataToSend, 
       });
 
@@ -75,6 +78,8 @@ const Home2 = () => {
       const res = await fetch("http://localhost:8000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        // ✅ NEW: This is CRITICAL. It tells the browser to save the cookie sent by the server
+        // credentials: "include",
         body: JSON.stringify({
           email: formData.email,
           password: formData.password,

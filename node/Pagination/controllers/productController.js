@@ -154,7 +154,7 @@ export async function filterKeyset(req, res) {
 
 
 // Why use ...baseFilter?
-// Explain to your students that using the spread operator (...) is a clean 
+// That using the spread operator (...) is a clean 
 // way to build dynamic queries. If the user doesn't select a category, 
 // baseFilter stays empty and doesn't affect the search. 
 // If they do, it gets "mixed in" perfectly with the pagination markers.

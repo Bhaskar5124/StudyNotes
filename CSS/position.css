@@ -1,0 +1,29 @@
+#container{
+    height: 600px;
+    width: 200px;
+    border: 1px red solid;
+    /* position: relative; */
+}
+
+#box{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    position: sticky;
+    top:50px;
+    left: 50px;
+}
+
+#box2{
+    height: 50px;
+    width: 50px;
+    background-color: darkgreen;
+    margin: 5px;
+}
+
+
+#container2{
+    height: 1000px;
+    width: 600px;
+    border: 1px red solid;
+}

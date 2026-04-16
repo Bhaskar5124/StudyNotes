@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Input Types Form</title>
+</head>
+<body>
+
+<h2>Sample HTML Form</h2>
+
+<form>
+
+    <!-- Text Input -->
+    <label for="fname">Full Name:</label><br>
+    <input type="text" id="fname" name="fullname" placeholder="Enter your name"><br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+    
+    <!-- Password -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <!-- Number -->
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="1" max="100"><br><br>
+
+    <!-- Phone -->
+    <label for="phone">Phone:</label><br>
+    <input type="tel" id="phone" name="phone"><br><br>
+
+    <!-- URL -->
+    <label for="website">Website:</label><br>
+    <input type="url" id="website" name="website"><br><br>
+
+    <!-- Date -->
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <!-- Time -->
+    <label for="time">Preferred Time:</label><br>
+    <input type="time" id="time" name="time"><br><br>
+
+    <!-- DateTime Local -->
+    <label for="meeting">Meeting Date & Time:</label><br>
+    <input type="datetime-local" id="meeting" name="meeting"><br><br>
+
+    <!-- Month -->
+    <label for="month">Month:</label><br>
+    <input type="month" id="month" name="month"><br><br>
+
+    <!-- Week -->
+    <label for="week">Week:</label><br>
+    <input type="week" id="week" name="week"><br><br>
+
+    <!-- Range -->
+    <label for="rating">Rate Experience (1-10):</label><br>
+    <input type="range" id="rating" name="rating" min="1" max="10"><br><br>
+
+    <!-- Color -->
+    <label for="color">Favorite Color:</label><br>
+    <input type="color" id="color" name="color"><br><br>
+
+    <!-- Radio -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Checkbox -->
+    <label>Hobbies:</label><br>
+    <input type="checkbox" id="reading" name="hobby" value="reading">
+    <label for="reading">Reading</label>
+
+    <input type="checkbox" id="sports" name="hobby" value="sports">
+    <label for="sports">Sports</label>
+
+    <input type="checkbox" id="music" name="hobby" value="music">
+    <label for="music">Music</label><br><br>
+
+    <!-- File Upload -->
+    <label for="file">Upload File:</label><br>
+    <input type="file" id="file" name="file"><br><br>
+
+    <!-- Search -->
+    <label for="search">Search:</label><br>
+    <input type="search" id="search" name="search"><br><br>
+
+    <!-- Hidden -->
+    <input type="hidden" name="userid" value="12345">
+
+    <!-- Textarea -->
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+    <!-- Select Dropdown -->
+    <label for="country">Country:</label><br>
+    <select id="country" name="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+    </select><br><br>
+
+    <!-- Datalist -->
+    <label for="browser">Choose Browser:</label><br>
+    <input list="browsers" id="browser" name="browser">
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Edge">
+    </datalist><br><br>
+
+    <!-- Submit & Reset -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>

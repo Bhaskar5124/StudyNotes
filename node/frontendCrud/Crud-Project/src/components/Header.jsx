@@ -9,8 +9,29 @@ function Header() {
 
   function handleLogout() {
     localStorage.removeItem("token");
+    localStorage.removeItem("userInfo");
     navigate("/");
   }
+
+  // 2. Updated Logout Logic
+  // async function handleLogout() {
+  //   try {
+  //     // ✅ CALL THE BACKEND: We must tell the server to clear the cookie
+  //     const res = await fetch("http://localhost:8000/logout", {
+  //       method: "POST",
+  //       credentials: "include", // 👈 IMPORTANT: Sends the cookie to be deleted
+  //     });
+
+  //     if (res.ok) {
+  //       // ✅ CLEANUP: Remove local UI state
+  //       localStorage.removeItem("userInfo");
+  //       alert("Logged out successfully");
+  //       navigate("/");
+  //     }
+  //   } catch (error) {
+  //     console.error("Logout failed:", error);
+  //   }
+  // }
 
   return (
     <header className="bg-gray-900 text-white shadow-md">
@@ -22,7 +43,7 @@ function Header() {
         </h1>
 
         {/* Right Side */}
-        {token ? (
+        {user ? (
           <div className="flex items-center gap-4">
             
             <Link

@@ -17,6 +17,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/crud')// returns a promise
     console.log("DB NOT CONNECTED" , err);
 })
 
+// middleware
 app.use(cors());
 app.use(express.json()); //body parsing middleware
 app.use(cookieParser());
@@ -26,7 +27,7 @@ app.get('/' , (req,res)=>{
     res.send("WELCOME TO ROOT ROUTE")
 })
 
-// middleware
+
 commentRoutes(app);
 userRoutes(app);
 

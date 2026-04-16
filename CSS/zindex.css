@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  border: 1px red solid;
+}
+
+.box {
+  position: absolute; /* Required for z-index to work */
+  width: 150px;
+  height: 100px;
+  color: white;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+#red {
+  background-color: red;
+  top: 20px;
+  left: 20px;
+  z-index: 4;
+}
+
+#blue {
+  background-color: blue;
+  top: 60px;
+  left: 60px;
+  z-index: 5; 
+}
+
+#green {
+  background-color: green;
+  top: 100px;
+  left: 100px;
+  z-index: 3;
+}

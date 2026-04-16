@@ -1,0 +1,177 @@
+/* Universal Selector */
+/* *{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+
+
+/* Element Selector */
+/* h1{
+    color: blue;
+} */
+
+/* Id Selector */
+/* #heading1{
+    color:blue;
+    font-weight: 100;
+} */
+
+/* Class Selector */
+/* .ulListItems{
+    color: brown;
+} */
+
+/* Selector List */
+/* h2,h3{
+    background-color: aqua;
+} */
+
+/* Child Combinator */
+/* Selects direct Child */
+/* div>p{
+    color: green;
+} */
+
+
+/* Descendent Selector */
+/* Selects all child inside div no matter at what level */
+/* div p{
+    color: orange;
+} */
+
+/* Next Sibling Selector */
+/* Selects single p after div */
+/* div+p{
+    color: darkblue;
+} */
+
+
+/* Subsequent Sibling Selector */
+/* Selects all p after div */
+/* div~p{
+    background-color: brown;
+} */
+
+inline > id >class and psuedo > element > universal
+
+button{
+    height: 70px;
+    width: 140px;
+    color: black;
+    background-color: azure;
+}
+
+/* Psuedo Classes */
+/* button:hover{
+    color: white;
+    background-color: darkcyan;
+    scale: 1.1;
+} */
+
+/* button:active{
+    background-color: blueviolet;
+} */
+
+/* #testInput{
+    height: 50px;
+    width: 100px;
+} */
+
+/* #testInput:focus{
+    background-color: aqua;
+} */
+
+/* a:visited{
+    color: goldenrod;
+} */
+
+/* p:first-child{
+    color: goldenrod;
+} */
+
+
+/* Psuedo Elements */
+/* h1::before{
+    content: "I come before h1 ";
+} */
+
+/* h1::after{
+    content: "I come after h1 ";
+} */
+
+/* p::first-line{
+    color: greenyellow;
+} */
+
+/* p::first-letter{
+    font-size: 30px;
+    color: brown;
+} */
+
+/* ::marker{
+    color: green;
+} */
+
+/* p::selection{
+    color: aqua;
+    background-color: black;
+} */
+
+/* CSS sizes */
+
+/* 1. Fixes Sizes */
+/* px : 1px = 1/96th of an inch =  96px = 1 inch
+pt: 72pt = 1 inch = prints
+cm/in - not  used */
+
+/* 2. Relative Sizes */
+/* em : div : 16px , h1, 2em = 32px , take reference from parent
+rem: by default : 1rem = 16px, take reference from root(html) */
+
+/* #sizeContainer{
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+} */
+
+
+/* #content{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    padding: 10px;
+    border: 5px solid red;
+    box-sizing: content-box;
+}
+
+#border{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    padding: 10px;
+    border: 5px solid red;
+    box-sizing: border-box;
+} */
+
+
+/* #blk{
+    margin: 20px;
+    height: 400px;
+    width: 400px;
+    border: 1px solid darkcyan;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .box{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    margin: 5px;
+} */
+

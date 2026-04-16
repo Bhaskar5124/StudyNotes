@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 //   useEffect(() => {
 //     fetch("https://jsonplaceholder.typicode.com/todos")
-//       .then((res) => res.json())
+//       .then((response) => response.json())
 //       .then((fdata) => setData(fdata));
 //  }, []);
 

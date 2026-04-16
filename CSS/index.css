@@ -1,0 +1,22 @@
+/* Basic Selectors */
+
+
+/* Universal Selector */
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Element Selector */
+h2{
+    color: blueviolet;
+}
+
+/* ID Selector */
+#head2{
+    background-color: aqua;
+}
+
+/* Class Selector */
+.container{
+    background-color: lightcyan;
+}
