@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #parent{
+    transition-property: height;
+} */
+
+/* div{ */
+    /* background-color: bisque;
+    height: 200px;
+    width: 200px; */
+    /* display: flex;
+    justify-content: start;
+    align-items: start; */
+    /* transition-duration: 2s; */
+    /* transition-property: all; */
+        /* transition: [property] [duration] [timing-function] [delay]; */
+    /* transition-property:height, width; */
+    /* transition-duration: 2s; */
+    /* transition-timing-function:ease-in; */
+    /* transition-delay: 2s; */
+    /* transition: 2s ease-in 0s; */
+    /* transform: rotate(20deg); */
+
+    /* transition-property: height, width; */
+    /* transition-duration: 0.5s, 2s; */
+    /* transition-property: transform, opacity; */
+    /* transition-duration: 0.5s, 1s; transform takes 0.5s, opacity takes 1s */
+     /* transition-timing-function:ease-in; */
+    /* transition-delay: 0s; */
+
+/* } */
+
+/* div:hover{ */
+    /* height: 400px;
+    width: 400px;
+    background-color: red; */
+    /* font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+/* } */
+
+/* CSS transform */
+#divTransform{
+    margin: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    transition: 1s all;
+}
+
+/* #divTransform:hover{ */
+    /* scale: 1.1; */
+    /* 2D Transform */
+    /* transform: translateX(50px); */
+    /* transform: translateY(-100px); */
+    /* transform: translate(50px, 100px); */
+
+    /* transform: rotate(360deg); */
+
+    /* transform: rotate(-20deg); */
+
+    /* transform: scale(2, 3); */
+    /* transform: scaleX(2); */
+    /* transform: scaleY(3); */
+
+    /* transform: skewX(20deg); */
+    /* transform: skewY(50deg); */
+    /* transform: skew(20deg, 10deg); */
+
+    /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+    /* transform: matrix(2, -0.3, 0, 1, 0, 0); */
+
+    /* 3D Transform */
+    /* transform: rotateX(50deg); */
+    /* transform: rotateY(90deg); */
+    /* transform: rotateZ(180deg); */
+/* } */
+
+
+/* Transition */
+/* ease - transition will start slow, then go fast, and end slow (this is default)
+linear - transition will keep the same speed from start to end
+ease-in - transition will start slow
+ease-out - transition will end slow
+ease-in-out - transition will have a slow start and end */
+

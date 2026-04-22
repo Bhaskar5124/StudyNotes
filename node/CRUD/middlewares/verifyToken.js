@@ -12,6 +12,7 @@ export const verifyToken = (req, res, next) => {
 
     try {
         // 3. Extract the token (Removing the word "Bearer")
+        // ["bearer", "fjfjdjjbd"]
         const token = authHeader.split(" ")[1];
 
         // 4. Verify the token with your Secret Key

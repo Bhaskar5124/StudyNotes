@@ -1,0 +1,33 @@
+div{
+    display: flex;
+}
+
+@media screen and (max-width: 900px) and (min-width:600px){
+    div{
+        flex-direction: column;
+    }
+}
+
+/* For Phone Screen */
+/* @media screen and (max-width: 480px){
+
+} */
+
+
+/* For Tablet Screen */
+/* @media screen and (min-width: 481px) and (max-width:768px){
+
+} */
+
+/* For Laptops Screen */
+/* @media screen and (min-width: 769px) and (max-width:1024px){
+
+} */
+
+/* For Large Screen */
+/* @media screen and (min-width: 1025px){
+
+} */
+
+
+
