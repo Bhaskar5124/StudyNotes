@@ -14,8 +14,9 @@
 // // push
 //time complexity less
 // // adds element into your array(adds in last)
-// a.push(6);
+// let z = a.push(6);
 // console.log(a);
+// console.log(z);
 
 //pop
 //delete element from array(deletes in last)
@@ -29,6 +30,7 @@
 //time complexity higher than push
 // a.unshift(9);
 // console.log(a);
+
 //shift
 //deletes a element inside array from front
 //time complexity higher than pop
@@ -38,8 +40,8 @@
 
 //splice
 // let a = ["apple", "banana", "orange", "guava"];
-// // a.splice(index,number of elements to delete, elements to add at index);
-// a.splice(2,2,"cherry");
+// // // a.splice(index,number of elements to delete, elements to add at index);
+// a.splice(2,1, "melon");
 // console.log(a);
 
 //splice method can delete specifically
@@ -53,7 +55,7 @@
 
 // // // // // Task: Square every number
 // const squared = numbers.map(zebra => zebra**2);
-// // let newArray = numbers.map((mul)=>mul*2);
+// let newArray = numbers.map((mul)=>mul*2);
 // console.log(numbers,squared);
 // console.log(newArray);
 
@@ -73,7 +75,7 @@
 
 // // // Task: Calculate the total sum
 // // // acc (accumulator) starts at 0, curr is the current item
-// const total = cart.reduce((acc, curr) => acc + curr, 60);
+// const total = cart.reduce((acc, curr) => acc + curr, 0);
 // const total = cart.reduce((acc,curr)=> acc+curr,0);
 
 // console.log(total); // 60
@@ -97,7 +99,7 @@
 // console.log(a);
 // a.sort();
 // a.sort((b,a)=>a-b);
-// a.sort((a,b)=>a-b);
+// a.sort((a,b)=>b-a);
 // a.sort((apple,banana)=>banana-apple);
 // console.log(a);
 
@@ -124,6 +126,8 @@
 //reverse
 // a.reverse();
 // console.log(a);
+
+
 // find
 // const users = [
 //   { id: 1, name: 'Alice' },
@@ -153,7 +157,7 @@
 // //includes
 
 // let a = ["a", "b", "c"];
-// console.log(a.includes("d"));
+// console.log(a.includes("b"));
 
 
 // //every
@@ -167,14 +171,14 @@
 
 //join
 // let ages = ['h','e','l','l','o'];
-// let agesstr = ages.join(",");
+// let agesstr = ages.join(" ");
 // console.log(agesstr);
 
 
 // //flat 
-// const myArr = [[1,2],[3,[2,3],4],[5,6]];
-// // const z = myArr.flat(2);
-// // console.log(z);
-// const newArr = myArr.flat(Infinity);
-// // // console.log(myArr);
-// console.log(newArr); 
+const myArr = [[1,2],[3,[2,3],4],[5,6]];
+// const z = myArr.flat(1);
+// console.log(z);
+const newArr = myArr.flat(Infinity);
+// console.log(myArr);
+console.log(newArr); 

@@ -39,14 +39,11 @@ const studentSchema = new mongoose.Schema({
 
 
 // STEP 2: Unique Index (Security + Speed)
-// studentSchema.path('rollNo').set(v => v); // Placeholder
 // studentSchema.index({ rollNo: 1 }, { unique: true });
 
 // What it is: This is Step 1 plus a Security Guard.
 
 // The Logic: It creates a fast index for searching, but it also monitors every insert or update. If someone tries to add a Roll No. that already exists, MongoDB throws an E11000 error and stops the operation.
-
-// Why the Placeholder? studentSchema.path('rollNo').set(v => v) is often used just to ensure Mongoose recognizes the path correctly before applying constraints, especially if the data was already messy.
 
 // Best for: Fields that must be one-of-a-kind, like email, username, or government_id
 //--------------------------------------------------------------------------------

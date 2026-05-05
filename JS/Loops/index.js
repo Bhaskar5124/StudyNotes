@@ -17,11 +17,11 @@
 
 
 // Do-while loop
-// let i = -5;
+// let i = 0;
 // do{
 //     console.log(i);
 //     i++;
-// }while(i<-2)
+// }while(i<6)
 
 
 
@@ -52,7 +52,7 @@
 //   role : "Trainer"
 // }
 
-// // console.log(a.name);
+// console.log(a.name);
 
 // for (let val in a){
 //   console.log(val,":",a[val]);
@@ -62,16 +62,16 @@
 
 
 // for of for arrays
-// let b = [1,2,3,4,5,"ho ho"];
+let b = [1,2,3,4,5,"ho ho"];
 
 //array
 
 // let a = [1,2,3,true,"hello", null, undefined,1,2,3];
 // console.log(a);
 
-// for(let santa of b){
-//   console.log(santa);
-// }
+for(let santa of b){
+  console.log(santa);
+}
 
 // console.log(b);
 

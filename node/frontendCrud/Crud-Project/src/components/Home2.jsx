@@ -75,7 +75,7 @@ const Home2 = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8000/login", {
+      const res = await fetch("http://localhost:8000/cookieLogin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // ✅ NEW: This is CRITICAL. It tells the browser to save the cookie sent by the server
@@ -88,7 +88,7 @@ const Home2 = () => {
 
       const data = await res.json();
       if (data.token) {
-        localStorage.setItem("token", data.token);
+        // localStorage.setItem("token", data.token);
         localStorage.setItem("userInfo", JSON.stringify(data.user));
         alert("Login Successful");
         navigate("/dashboard");

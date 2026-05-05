@@ -12,53 +12,53 @@ import { Provider } from 'react-redux';
 // import About from './components/About.jsx';
 const About = lazy(() => import('./components/About.jsx'));
 
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
-
-let myAppRoute = createBrowserRouter([
-  {
-    path: "/", //home path
-    element: (
-      <Suspense fallback={<h1>Loading Layout...</h1>}>
-        <App />
-      </Suspense>
-    ),
-    errorElement: <Error/>,
-    children: [
-      {
-        path: "/",
-        element: (
-          <Suspense fallback={<h1>Loading Home...</h1>}>
-            <Home/>
-          </Suspense>
-        )
-      },
-      {
-        path: "/about", 
-        element: (
-          <Suspense fallback={<h1>Loading About...</h1>}>
-            <About/>
-          </Suspense>
-        )
-      },
-      {
-        path:"/bookdetail/:id",
-        element:(
-          <Suspense fallback={<h1>Loading BookDetails...</h1>}>
-            <Bookdetails/>
-          </Suspense>
-        )
-      }
-    ]
-  }
-]);
-
-createRoot(document.getElementById("root")).render(
-  <RouterProvider router={myAppRoute}></RouterProvider>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
 )
+
+// let myAppRoute = createBrowserRouter([
+//   {
+//     path: "/", //home path
+//     element: (
+//       <Suspense fallback={<h1>Loading Layout...</h1>}>
+//         <App />
+//       </Suspense>
+//     ),
+//     errorElement: <Error/>,
+//     children: [
+//       {
+//         path: "/",
+//         element: (
+//           <Suspense fallback={<h1>Loading Home...</h1>}>
+//             <Home/>
+//           </Suspense>
+//         )
+//       },
+//       {
+//         path: "/about", 
+//         element: (
+//           <Suspense fallback={<h1>Loading About...</h1>}>
+//             <About/>
+//           </Suspense>
+//         )
+//       },
+//       {
+//         path:"/bookdetail/:id",
+//         element:(
+//           <Suspense fallback={<h1>Loading BookDetails...</h1>}>
+//             <Bookdetails/>
+//           </Suspense>
+//         )
+//       }
+//     ]
+//   }
+// ]);
+
+// createRoot(document.getElementById("root")).render(
+//   <RouterProvider router={myAppRoute}></RouterProvider>
+// )
 
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>

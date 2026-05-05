@@ -76,3 +76,14 @@ app.get('/analytics', async (req, res) => {
 });
 
 app.listen(8050, () => console.log("Aggregation Lab running on http://localhost:8050"));
+
+
+
+// The "Before and After" VisualImagine your data looks like this after the $unwind stage:
+// { tag: "tech", price: 1200, stock: 10 }
+// { tag: "tech", price: 80, stock: 0 }
+// { tag: "kitchen", price: 15, stock: 50 }
+// After this $group stage, the output becomes:
+// _id (The Tag)       averagePrice         totalStock     productCount
+// "tech"              640                   10                 2"             
+// "kitchen"            15                   50                 1

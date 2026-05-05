@@ -50,9 +50,27 @@ app.get('/search', async (req, res) => {
         
         // We use .explain("executionStats") to see the "Under the hood" performance
         const result = await Student.find({ rollNo: roll }).explain("executionStats");
-        
+
+
+// When you run a query normally, MongoDB just gives you the data. When you add .explain(), MongoDB gives you the search report.
+
+// What does the explain() method do?
+// By default, MongoDB tries to find the most efficient way to get your data (this is called the Query Plan). The explain() method returns a JSON object that reveals:
+// Whether MongoDB used an Index or searched every single document (Collection Scan).
+// How many documents it looked at vs. how many it actually returned.
+// How long the search took in milliseconds.
+
+// Why pass "executionStats"?The explain() method has three "verbosity" levels. 
+// If you don't pass a string, you get the default level, which only shows what MongoDB planned to do
+// , not what actually happened.
+// Level                                What it tells you
+// queryPlanner (Default)               "This is my plan. I'll probably use the rollNo index.
+// "executionStats"                      I ran the query. It took 2ms, I scanned 1 document, and I used the index.
+// "allPlansExecution                   "I tried 3 different ways to find this, and here is why I chose this one."
+
+        console.log('result',result);
         const stats = result.executionStats;
-        // console.log('Stats',stats);
+        console.log('Stats',stats);
 
         res.json({
             message: "Query stats retrieved",
@@ -74,7 +92,7 @@ app.listen(8050, () => console.log("Server running on http://localhost:8050"));
 
 // Postman: GET http://localhost:8050/search?roll=9999
 
-// Result to show students: * queryStrategy: "COLLSCAN" (Collection Scan - the bad one).
+// Result: * queryStrategy: "COLLSCAN" (Collection Scan - the bad one).
 
 // totalDocsExamined: 10,000. MongoDB had to check every single student to find number 9,999.
 
@@ -85,7 +103,7 @@ app.listen(8050, () => console.log("Server running on http://localhost:8050"));
 
 // Postman: GET http://localhost:8050/search?roll=9999
 
-// Result to show students:
+// Result:
 
 // queryStrategy: "IXSCAN" (Index Scan - the fast one).
 

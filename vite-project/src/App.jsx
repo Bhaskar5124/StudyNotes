@@ -35,7 +35,7 @@ function App() {
     {/* <Effect/> */}
     {/* <Timer/> */}
     {/* <FocusableInput/> */}
-    {/* <Mem/> */}
+    <Mem/>
     {/* <Callback/> */}
     {/* <A/> */}
     {/* <E/> */}
@@ -49,9 +49,9 @@ function App() {
 
       {/* <CounterRedux/> */}
 
-    <Header/>
+    {/* <Header/>
     <Outlet/>
-    <Footer/>
+    <Footer/> */}
     </>
   )
 }

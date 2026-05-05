@@ -13,8 +13,9 @@
 // // console.log(a+b);
 // }
 
-// sum(5,6); // z = 11 //5 and 6 are arguements
-// sum(5,6);
+// let z = sum(5,6);
+// console.log(z); // z = 11 //5 and 6 are arguements
+// console.log(sum(11,12));
 // let c = 9;
 // console.log("c+z",c+z);
 // console.log(z);
@@ -25,7 +26,7 @@
 //     console.log(`Hello ${name}`);
 // }
 
-// greeting("Afsar"); //"afsar" is argument
+// greeting("Himanshu"); //"afsar" is argument
 
 
 //2.Function Expression
@@ -46,15 +47,22 @@
 
 
 // //3.Arrow function
-// const multiply = (a,b) => a*b;
+const multiply = (a,b) => a*b;
 // //automatic return
-// let z = multiply(6,5);
-// console.log(z);
+let z = multiply(6,5);
+console.log(z);
+
+
+const divide = (a,b)=>{
+        // console.log('I am dividing');
+        return a/b;
+}
+console.log(divide(10,2));
 
 //4-5.Immediately Invoked Function and anonymous function
-// (function(){
-//     console.log("I run Immediately");
-// })();
+(function(){
+    console.log("I run Immediately");
+})();
 
 
 

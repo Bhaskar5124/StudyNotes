@@ -184,7 +184,7 @@ export const cookieLogin = async (req, res) => {
         res.status(200)
             .cookie("token", token, {
                 httpOnly: true, // ✅ JavaScript cannot access this (prevents XSS)
-                secure: false,
+                secure: false, //https
                 // secure: process.env.NODE_ENV === "production", // ✅ Send only over HTTPS in production
                 sameSite: "strict", // ✅ Prevents CSRF attacks
                 maxAge: 3600000,    // ✅ Cookie expires in 1 hour (matching JWT)
@@ -209,7 +209,7 @@ export const cookieLogin = async (req, res) => {
 export const logout = (req, res) => {
     res.cookie("token", "", {
         httpOnly: true,
-        expires: new Date(0), // Sets expiration to 1970 (immediate expiry)
+        expires: new Date(0), // Sets expiration (immediate expiry)
         sameSite: "strict",
     }).status(200).json({ message: "Logged out successfully" });
 };

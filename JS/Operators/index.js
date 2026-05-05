@@ -14,24 +14,24 @@
 
 // console.log('Power', 5**3);
 
-// console.log("Modulo", 547%67);
+// console.log("Modulo", 9475897%67);
 
 // console.log("math power",Math.pow(2,3));
 //explore math
 
-//Increment ++ = Increment by 1
+// Increment ++ = Increment by 1
 
 //Decrement -- = Decrement by 1
 
 // let a = 5;
 // a++; // a=a+1
-// console.log(a)//6
+// console.log(a)//
 // a--; // a=a-1
-// console.log(a);//5
+// console.log(a);//
 
 
 //Comparision operator
-
+//gives true or false in output after comparing
 
 // console.log(2<5);
 
@@ -48,6 +48,8 @@
 // console.log(1=='1');//loose equal
 
 // console.log(1==='1');//Strictly equal
+
+// console.log(true=='1');
 
 
 // console.log(5!=2);
@@ -73,28 +75,32 @@
 
 // let a = 3;
 // let b = 2;
-// if(a==2 || b==1){
+// let c = 4;
+// let d = 5;
+// if(a==3 && b==2){
 //     console.log("IF answer is true");
 // }else{
 //     console.log("IF answer is not true");
 // }
+// console.log(a==3 || b==1 || c==1 || d==1);
 
 
-// let a = true;
+// let a = false;
 // console.log(!a);
 
 //if
 
-// let a = 2;
-// if(a==1){
-//     console.log("yes a = 1");
+// let a = 1;
+// let b = 1;
+// if(a==1 || b==2){
+//     console.log("yes a = 1");e
 // }
 
 // console.log("Runs afte if check");
 
 //if-else
 
-    // let a = 1;
+    // let a = 135873687;
     // if(a==1){
     //     console.log("yes a= 1");
     // }else{
@@ -107,14 +113,14 @@
 
 
 //if - else if
-// let a= 4;
-// if(a==1){
-//     console.log("A is 1");
-// }else if(a==2){
-//     console.log("a is 2");
-// }else{
-//     console.log("a is invalid");
-// }
+let a= 5;
+if(a==1){
+    console.log("A is 1");
+}else if(a==2){
+    console.log("a is 2");
+}else{
+    console.log("a is invalid");
+}
 
 //Logical Operator
 

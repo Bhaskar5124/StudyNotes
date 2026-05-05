@@ -1,4 +1,6 @@
 //Strings
+// let a = [1,2,3,4];
+// console.log(typeof(a));
 
 // "" // Double quotes
 // '' // Single Quotes
@@ -22,12 +24,13 @@
 // console.log(str[6]);
 
 //charat prints character at given index
-// console.log(b.charAt(2));
+// console.log(str.charAt(2));
 
 //Concatenation
-// let c = "name";
+
 // let a = " af sar  ";
-// let b = "Hello world"; 
+// let b = "Helloworld";
+// let c = "name"; 
 // //0 1 2 3 4 5 6 7 8 9
 // console.log(a.concat(b,c));
 // console.log(a+b+c);
@@ -47,7 +50,7 @@
 
 
 //Split
-// let f = b.split(" ");
+// let f = b.split("");
 // console.log(f);
 
 // Trim removes first and last space
@@ -58,7 +61,7 @@
 
 
 
-// let a = "Helloworld My is";
+let a = "Helloworld My is";
 
 // let b = a.substring(0,4);
 // console.log(b); //same as slice method
@@ -75,9 +78,9 @@
 // let e = a.toLowerCase();
 // console.log(e);
 
-// console.log(a.startsWith("hel"));
+// console.log(a.startsWith("ell"));
 
-// console.log(a.endsWith("is"));
+// console.log(a.endsWith("My is"));
 
 // console.log(a.includes("My"));
 
