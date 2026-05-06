@@ -47,22 +47,22 @@
 
 
 // //3.Arrow function
-const multiply = (a,b) => a*b;
+// const multiply = (a,b) => a*b;
 // //automatic return
-let z = multiply(6,5);
-console.log(z);
+// let z = multiply(6,5);
+// console.log(z);
 
 
-const divide = (a,b)=>{
-        // console.log('I am dividing');
-        return a/b;
-}
-console.log(divide(10,2));
+// const divide = (a,b)=>{
+//         // console.log('I am dividing');
+//         return a/b;
+// }
+// console.log(divide(10,2));
 
 //4-5.Immediately Invoked Function and anonymous function
-(function(){
-    console.log("I run Immediately");
-})();
+// (function(){
+//     console.log("I run Immediately");
+// })();
 
 
 
@@ -199,7 +199,7 @@ console.log(divide(10,2));
 
 // let c = 10;
 // function outer(){
-//     let c = 40;
+// //     let c = 40;
 //     let d = 30;
 
 //     function inner(){
@@ -216,21 +216,21 @@ console.log(divide(10,2));
 
 //Closures:
 
-// function outer(){
-//     var a = 10;
-//     let b = 20;
-//     function inner(){
-//         b = b+1;
-//         console.log(b);
-//     }
-//     return inner;
-// }
+function outer(){
+    var a = 10;
+    let b = 20;
+    function inner(){
+        b = b+1;
+        console.log(b);
+    }
+    return inner;
+}
 
-// let returnedVal = outer();
-// // // console.log(returnedVal);
+let returnedVal = outer();
+console.log(returnedVal);
 
-// returnedVal();
-// returnedVal();
+returnedVal();
+returnedVal();
 
 // function greet(){
 //     let a = 1;
